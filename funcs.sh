@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 
-prefix_log() {
+log() {
     level=$1
     msg=$2
     echo "$(date +'%D %H:%M:%S') ${level} ${msg}"
 }
 
 log_debug() {
-    prefix_log "DEBUG" $1
+    log "DEBUG" "$@"
 }
 
 log_info() {
-    prefix_log "INFO" $1
+    log "INFO" "$@"
 }
 
 log_warn() {
-    prefix_log "WARN" $1
+    log "WARN" "$@"
 }
 
 log_error() {
-    prefix_log "ERROR" $1
+    log "ERROR" "$@"
 }
 
 true_then_run() {
